@@ -28,6 +28,7 @@ LIBS:opto
 LIBS:atmel
 LIBS:contrib
 LIBS:valves
+LIBS:remote-cache
 EELAYER 25 0
 EELAYER END
 $Descr A4 11693 8268
@@ -76,13 +77,9 @@ F 3 "" H 2350 5100 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	2350 5250 2350 5350
+	2350 5250 2350 5550
 Wire Wire Line
-	2350 5350 2350 5550
-Wire Wire Line
-	2350 4750 2350 4850
-Wire Wire Line
-	2350 4850 2350 4950
+	2350 4750 2350 4950
 $Comp
 L Q_PNP_BCE Q1
 U 1 1 571DD5D7
@@ -106,13 +103,7 @@ F 3 "" H 2050 5350 50  0000 C CNN
 	0    1    1    0   
 $EndComp
 Wire Wire Line
-	1500 4850 2350 4850
-Wire Wire Line
-	2350 4850 2750 4850
-Wire Wire Line
-	2750 4850 3300 4850
-Wire Wire Line
-	3300 4850 4100 4850
+	1500 4850 4100 4850
 Wire Wire Line
 	1500 4850 1500 5150
 Connection ~ 2350 4850
@@ -148,17 +139,9 @@ F 3 "" H 2700 6900 50  0000 C CNN
 	1    0    0    1   
 $EndComp
 Wire Wire Line
-	1700 6900 1950 6900
+	1700 6900 2500 6900
 Wire Wire Line
-	1950 6900 2350 6900
-Wire Wire Line
-	2350 6900 2500 6900
-Wire Wire Line
-	2350 5950 2350 6500
-Wire Wire Line
-	2350 6500 2350 6900
-Wire Wire Line
-	2350 6900 2350 7000
+	2350 5950 2350 7000
 $Comp
 L C C1
 U 1 1 571DD99F
@@ -235,9 +218,7 @@ F 3 "" H 2350 7500 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	2350 7300 2350 7400
-Wire Wire Line
-	2350 7400 2350 7500
+	2350 7300 2350 7500
 Wire Wire Line
 	2350 7400 2500 7400
 $Comp
@@ -278,9 +259,7 @@ Wire Wire Line
 Wire Wire Line
 	4100 6900 4100 6700
 Wire Wire Line
-	2650 5750 2750 5750
-Wire Wire Line
-	2750 5750 4100 5750
+	2650 5750 4100 5750
 Text Label 4500 6500 0    60   ~ 0
 BRICKS_ON
 Wire Wire Line
@@ -344,17 +323,6 @@ Wire Wire Line
 	2550 6500 2350 6500
 Connection ~ 2350 6500
 $Comp
-L Q_PNP_BCE Q5
-U 1 1 571E01C1
-P 3400 5250
-F 0 "Q5" H 3700 5300 50  0000 R CNN
-F 1 "Q_PNP_BCE" H 4000 5200 50  0001 R CNN
-F 2 "" H 3600 5350 50  0000 C CNN
-F 3 "" H 3400 5250 50  0000 C CNN
-	1    3400 5250
-	-1   0    0    1   
-$EndComp
-$Comp
 L Q_PNP_BCE Q6
 U 1 1 571E02BF
 P 4000 5250
@@ -366,29 +334,12 @@ F 3 "" H 4000 5250 50  0000 C CNN
 	1    0    0    1   
 $EndComp
 Wire Wire Line
-	3600 5250 3700 5250
-Wire Wire Line
-	3700 5250 3800 5250
-Wire Wire Line
-	3300 5450 3300 5550
-Wire Wire Line
-	3300 5550 3300 6300
-Wire Wire Line
-	3300 5550 3700 5550
-Wire Wire Line
-	3700 5550 3700 5250
-Connection ~ 3700 5250
-Connection ~ 3300 5550
+	3300 5250 3800 5250
 Wire Wire Line
 	4100 4850 4100 5050
 Connection ~ 2750 4850
 Wire Wire Line
-	3300 5050 3300 4850
-Connection ~ 3300 4850
-Wire Wire Line
-	4100 5450 4100 5750
-Wire Wire Line
-	4100 5750 4100 6300
+	4100 5450 4100 6300
 Connection ~ 4100 5750
 $Comp
 L ATMEGA328-A IC?
@@ -415,11 +366,7 @@ $EndComp
 Wire Wire Line
 	6250 1100 6100 1100
 Wire Wire Line
-	6100 950  6100 1100
-Wire Wire Line
-	6100 1100 6100 1200
-Wire Wire Line
-	6100 1200 6100 1400
+	6100 950  6100 1400
 Wire Wire Line
 	6100 1200 6250 1200
 Connection ~ 6100 1100
@@ -466,11 +413,7 @@ F 3 "" H 6100 3500 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	6100 3200 6100 3300
-Wire Wire Line
-	6100 3300 6100 3400
-Wire Wire Line
-	6100 3400 6100 3500
+	6100 3200 6100 3500
 Wire Wire Line
 	6100 3200 6250 3200
 Wire Wire Line
@@ -520,9 +463,7 @@ $EndComp
 Wire Wire Line
 	3700 7200 3700 7500
 Wire Wire Line
-	3700 6700 3700 6800
-Wire Wire Line
-	3700 6800 3700 6900
+	3700 6700 3700 6900
 Wire Wire Line
 	3300 6800 3700 6800
 Connection ~ 3700 6800
@@ -643,26 +584,16 @@ F 3 "" H 3500 2050 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	2400 1450 2400 1550
-Wire Wire Line
-	2400 1550 2400 1750
-Wire Wire Line
-	2400 1750 2400 1900
+	2400 1450 2400 1900
 Connection ~ 2400 1750
 Wire Wire Line
 	3350 1750 3500 1750
 Wire Wire Line
-	3500 1650 3500 1750
-Wire Wire Line
-	3500 1750 3500 1900
+	3500 1650 3500 1900
 Wire Wire Line
 	2400 2200 2400 2400
 Wire Wire Line
-	2000 2400 2400 2400
-Wire Wire Line
-	2400 2400 2950 2400
-Wire Wire Line
-	2950 2400 3500 2400
+	2000 2400 3500 2400
 Wire Wire Line
 	3500 2400 3500 2200
 Wire Wire Line
@@ -679,9 +610,7 @@ F 3 "" H 2950 2500 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	2950 2050 2950 2400
-Wire Wire Line
-	2950 2400 2950 2500
+	2950 2050 2950 2500
 Connection ~ 2950 2400
 $Comp
 L +3.3V #PWR?
@@ -707,9 +636,7 @@ F 3 "" H 4200 2200 50  0000 C CNN
 	-1   0    0    1   
 $EndComp
 Wire Wire Line
-	2700 1250 3800 1250
-Wire Wire Line
-	3800 1250 4400 1250
+	2700 1250 4400 1250
 $Comp
 L Q_NPN_BCE Q?
 U 1 1 571E3F01
@@ -746,9 +673,7 @@ $EndComp
 Wire Wire Line
 	4000 1800 4000 1950
 Wire Wire Line
-	4000 1950 4200 1950
-Wire Wire Line
-	4200 1950 4400 1950
+	4000 1950 4400 1950
 Wire Wire Line
 	4400 1950 4400 1850
 Connection ~ 4200 1950
@@ -802,9 +727,7 @@ Wire Wire Line
 	2000 1550 2400 1550
 Connection ~ 2400 1550
 Wire Wire Line
-	2000 1900 2000 2000
-Wire Wire Line
-	2000 2000 2000 2050
+	2000 1900 2000 2050
 Text Label 1900 2000 2    60   ~ 0
 BAT_FB
 Text Label 8300 2150 0    60   ~ 0
@@ -814,4 +737,19 @@ Wire Wire Line
 Wire Wire Line
 	1900 2000 2000 2000
 Connection ~ 2000 2000
+$Comp
+L R R?
+U 1 1 571E512D
+P 3300 5500
+F 0 "R?" V 3380 5500 50  0000 C CNN
+F 1 "100k" V 3300 5500 50  0000 C CNN
+F 2 "" V 3230 5500 50  0000 C CNN
+F 3 "" H 3300 5500 50  0000 C CNN
+	1    3300 5500
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	3300 5250 3300 5350
+Wire Wire Line
+	3300 5650 3300 6300
 $EndSCHEMATC
